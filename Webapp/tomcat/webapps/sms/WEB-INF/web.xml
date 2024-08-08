@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>Welcome to Tomcat</display-name>
+  <servlet>
+	<servlet-name>LoingPage</servlet-name>
+	<servlet-class>FirstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>LoingPage</servlet-name>
+	<url-pattern>/FirstServlet</url-pattern>
+ </servlet-mapping>
+ <servlet>
+	<servlet-name>Calculetor</servlet-name>
+	<servlet-class>ArithmeticOpretion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>Calculetor</servlet-name>
+	<url-pattern>/ArithmeticOpretion</url-pattern>
+ </servlet-mapping>
+</web-app>

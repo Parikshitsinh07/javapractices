@@ -1,0 +1,13 @@
+interface MyDatabase{
+
+
+}
+
+public interface MyDatabase
+{
+	private String Driver;
+	pri
+   abstract public void getConnection ();
+   abstract public void execute();
+   abstract public double setConnectionClose();
+}

@@ -1,0 +1,19 @@
+java date 11/10/23
+
+has->a relationship hierarchy na hoy 
+	-assosiativity vadhare hoy
+	-containership type
+is->a relationship
+	-polimophig beheviour kare 6 
+	-heritence type
+
+polimophisam:-
+	- ek vastu agrgument rite biheviour change 
+	2 type polimophisam 
+		- compali time
+			-
+		- run time
+			-is a relationship hoy 
+			-inheritenc no object ma chaild class made 6
+	-method ovver wirte
+	-method ovver loding 

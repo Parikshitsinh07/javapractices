@@ -1,0 +1,99 @@
+<html>
+	<head>	
+		<title>Home Page</title>
+		<style>
+			div{
+				width:255px;
+				margin:70px auto;
+			}
+			h1{
+				margin:15px 10px;
+			}
+			#PassWord{
+				margin:0px 6px;
+			}
+			.User{
+				margin:16px -5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>Fill Up this form</h1>
+			<form action = "FirstServlet" >
+				<div class= "User">
+					<label for="User">User Name:</label>
+					<input type="text" placeholder="Enter Your Name" Name="User" class= "User"/><br>
+				</div>
+				<div class= "User">
+					<label for="PassWord">PassWord:</label>
+					<input type="password" placeholder="Enter Your PassWord" Name="PassWord" id = "PassWord"/><br>
+				</div>
+				<input type="submit" value="Submit Now"/>		
+			</form>
+			<div class="result">
+			<h1>Calculetor</h1>
+        <form action="ArithmeticOpretion" onsubmit="return cheak()" name="myform">
+            <table>
+                <tr>
+                    <td><label for="n1">Operand 1</label></td>
+                    <td><input type="number" name="n1" id="n1" step="0.01"></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="opp">Operation</label><br>
+                    </td>
+
+                    <td>
+                        <label for="add">Addition</label>
+                        <input type="radio" name="opp" id="add" value="add"><br>
+                       
+                        <label for="sub">Submition</label>
+                        <input type="radio" name="opp" id="sub" value="sub"><br>
+
+                      <label for="mul">Multiplication</label>  
+                        <input type="radio" name="opp" id="mul" value="mul"><br>
+                        
+                        <label for="div">Division</label>
+                        <input type="radio" name="opp" id="div" value="div"><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="n2">Operand 2</label></td>
+                    <td><input type="number" name="n2" id="n2" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Reset"></td>
+                    <td><input type="submit" value="Show Result" name="set"></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+
+    <script>
+        cheak = () => {
+
+            const num1 = Number(document.querySelector('#n1').value);
+            const num2 = Number(document.querySelector('#n2').value);
+            const operator = document.myform.opp.value;
+
+            if (operator == "") {
+                alert("Selcet Operator")
+                return false
+            }
+
+            if ((num1 == "" || num2 == "") ) {
+                alert("Enter number")
+                return false;
+            }
+
+        }
+    </script>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,32 @@
+java - database
+	detabase connectivity mate packege- sql
+	import java.sql.*; 
+	leval cantectivity
+		-Application
+		-Register the Driver class
+			-drive type-4
+				-jdbc->odbc drive->dbms
+				-jdbc->netiv drive->dbms 
+				-jdbc->midel level->DBMS 
+				-jdbc->Dmbs. 
+			-Driver is interfacse 
+			-drive is work like Fremwork
+			-The interface that every driver class must implement.
+			-driver manegar 
+				-mostly static method hoy
+		-Create connection
+		-Create statement
+				- simpley -> result set
+				- prepared statement -> result set
+					-peramiter pass 
+				- callable statement -> result set
+					-dbms ma functin hoy tyare
+			-
+		-Execute queries
+			ExecuteQueries - slect mate
+			ExecuteUpdet - effected Row
+			Execute - multipal Queries 
+		-Close connection
+
+jwi/jdi/(j2wr-arcitectur)-maneger
+		

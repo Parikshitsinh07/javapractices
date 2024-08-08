@@ -1,0 +1,72 @@
+
+UNIT - I 
+
+Object Oriented Technology & Java Language Basic 
+
+પ્રોગ્રામિંગ ભાષાઓનો દાખલો, ઑબ્જેક્ટ-ઓરિએન્ટેડ ટેક્નોલોજીનો ઉત્ક્રાંતિ
+Java Basic:
+Introduction to Java Features & Advantages
+
+Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is intended to let application developers write once, and run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.
+
+JAVA was developed by James Gosling at Sun Microsystems Inc in the year 1995 and later acquired by Oracle Corporation. It is a simple programming language. Java makes writing, compiling, and debugging programming easy.
+What is the introduction of Java and its features?
+Java is a class-based, object-oriented programming language and is designed to have as few implementation dependencies as possible. 
+
+What is Java and its advantages?
+The advantages of Java are as follows: Java is easy to learn. Java was designed to be easy to use and is therefore easy to write, compile, debug, and learn than other programming languages. Java is object-oriented. This allows you to create modular programs and reusable code.
+
+StringBuffer class in Java?
+StringBuffer is a class in Java that represents a mutable sequence of characters. It provides an alternative to the immutable String class, allowing you to modify the contents of a string without creating a new object every time.
+
+StringBuffer objects are mutable, meaning that you can change the contents of the buffer without creating a new object.
+The initial capacity of a StringBuffer can be specified when it is created, or it can be set later with the ensureCapacity() method.
+The append() method is used to add characters, strings, or other objects to the end of the buffer.
+The insert() method is used to insert characters, strings, or other objects at a specified position in the buffer.
+The delete() method is used to remove characters from the buffer.
+The reverse() method is used to reverse the order of the characters in the buffer.
+
+Wrapper Classes in Java
+A Wrapper class in Java is a class whose object wraps or contains primitive data types. When we create an object to a wrapper class, it contains a field and in this field, we can store primitive data types. 
+
+Advantages of Wrapper Classes
+Collections allowed only object data.
+On object data we can call multiple methods compareTo(), equals(), toString()
+Cloning process only objects
+Object data allowed null values.
+Serialization can allow only object data.
+
+1. Which are the wrapper classes in Java?
+A Wrapper class in Java is a class whose object wraps or contains primitive data types.
+
+2. Why use the wrapper class in Java?
+The wrapper class in Java is used to convert primitive data types into objects. Objects are needed if we wish to modify the arguments passed into a method.
+
+3. What are the 8 wrapper classes in Java?
+There are 8 Wrapper classes in Java these are Boolean, Byte, Short, Character, Integer, Long, Float, Double.
+
+**Class**
+ is a template used to create objects and to define object data types and methods.
+**Object**
+n instance of a Java class, meaning it is a copy of a specific class. 
+**Constructor**
+Constructor in java is used to create the instance of the class.
+
+
+
+
+
+Object oriented Programing  
+1992-Architechuter nurtal
+what is Programing Lenguage?
+for communication univarsal machin( મશીન સાથે વાત કરવા  માટે)
+
+જાવા પ્રોગ્રામિંગ લન્ગુવેજ  એ  સામાન્ય હેતુવાળી ,સહવતી મજબૂત રીતે ટાઈપ કરેલી , વર્ગ આધારિત ઓબ્જેક્ટ ઓરિએન્ટેડ ભાષા છે .તે સામાન્ય રીતે જવા વર્ચુઅલ મશીન સ્પસ્ટીકરણ માં વ્યખાયિત બાઈટકોડ સૂચન સેટ અને  બાઈનેરી ફોર્મેટ માં કમ્પાઇલ કરવા માં આવે છે .
+
+The Java programming language is a general-purpose, supported strongly typed, class-based object-oriented language. It is typically compiled into a binary format and a bytecode instruction set defined in the Java Virtual Machine specification.
+
+
+what is java ? with syntex.
+-java is a class based high level Object Oriented Programing lenguage devloped by "Jems Gosling" and are Friends the year 1991.
+
+java 

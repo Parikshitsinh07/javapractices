@@ -1,0 +1,107 @@
+
+What is Notifications  and there types ?
+A notification is a message that Android displays outside your app's UI to provide the user with reminders, communication from other people, or other timely information from your app. Users can tap the notification to open your app or take an action directly from the notification.
+
+#Status bar and notification drawer
+Figure 1. Notification icons appear on the left side of the status bar.
+Users can swipe down on the status bar to open the notification drawer, where they can view more details and take actions with the notification.
+Figure 2. Notifications in the notification drawer.
+->Users can drag down on a notification in the drawer to reveal the expanded view, which shows additional content and action buttons, if provided. Starting in Android 13,
+
+#Heads-up notification:
+->Beginning with Android 5.0, notifications can briefly appear in a floating window called a heads-up notification. 
+->This behavior is normally for important notifications that the user needs to know about immediately, and it only appears if the device is unlocked.
+Figure 3. A heads-up notification appears in front of the foreground app.
+ ->The user's activity is in fullscreen mode, such as when the app uses fullScreenIntent.
+ ->The notification has high priority and uses ringtones or vibrations on devices running Android 7.1 (API level 25) and lower.
+
+Lock screen
+->
+Beginning with Android 5.0, notifications can appear on the lock screen.
+
+Users can use the system settings to choose the level of detail visible in lock screen notifications or to disable all lock screen notifications. Starting with Android 8.0, users can disable or enable lock screen notifications for each notification channel.
+
+Figure 4. Notifications on the lock screen with sensitive content hidden.
+
+App icon badge:
+In supported launchers on devices running Android 8.0 (API level 26) and higher, app icons indicate new notifications with a colored badge known as a notification dot on the corresponding app launcher icon.
+
+Users can touch & hold an app icon to see the notifications for that app. Users can dismiss or act on notifications from that menu, similar to the notification drawer.
+
+Figure 5. Notification badges and the touch & hold menu.
+
+
+Notification anatomy:
+
+The design of a notification is determined by system templates, and your app defines the contents for each portion of the template. Some details of the notification appear only in the expanded view.
+
+Figure 7. A notification with basic details.
+->The most common parts of a notification are indicated in   figure 7, as follows:
+ 1.Small icon: required; set using setSmallIcon().
+ 2.App name: provided by the system.
+ 3.Time stamp: provided by the system, but you can    override it using setWhen() or hide it using    setShowWhen(false).
+ 4.Large icon: optional; usually used only for contact    photos. Don't use it for your app icon. Set using    setLargeIcon().
+ 5.Title: optional; set using setContentTitle().
+ 6.Text: optional; set using setContentText().
+
+Notification actions:
+	Although it's not required, it's a good practice for every notification to open an appropriate app activity when it's tapped. In addition to this default notification action, you can add action buttons that complete an app-related task from the notification—often without opening an activity—as shown in figure 8.
+
+Figure 8. A notification with action buttons.
+	Starting in Android 7.0 (API level 24), you can add an action to reply to messages or enter other text directly from the notification.
+	Starting in Android 10 (API level 29), the platform can automatically generate action buttons with suggested intent-based actions.
+
+Require an unlocked device
+	To require a device to be unlocked before your app invokes a given notification action, pass true into setAuthenticationRequired()
+
+	Notification moreSecureNotification = new Notification.Action.Builder(...)
+
+    // This notification always requests authentication when invoked
+    // from a lock screen.
+    .setAuthenticationRequired(true)
+    .build();
+
+Expandable notification:
+	By default, the notification's text content is truncated to fit on one line. If you want your notification to be longer, you can enable a larger text area that's expandable by applying an additional template, as shown in figure 9.
+
+Figure 9. An expandable notification for large text.
+
+	You can also create an expandable notification with an image, in inbox style, with a chat conversation, or with media playback controls. For more information, read Create an expandable notification.
+
+Notification updates and groups:
+	However, if it's necessary to deliver multiple notifications, consider grouping the separate notifications into a group, available on Android 7.0 and higher.
+
+A notification group lets you collapse multiple notifications into one post in the notification drawer with a summary. The user can progressively expand the notification group and each notification within it for more details, as shown in figure 10.
+
+Figure 10. A collapsed and expanded notification group.
+
+Starting in Android 8.0 (API level 26), all notifications must be assigned to a channel or they don't appear. This lets users disable specific notification channels for your app instead of disabling all your notifications. Users can control the visual and auditory options for each channel from the Android system settings, as shown in figure 11. Users can also touch & hold a notification to change behaviors for the associated channel.
+
+On devices running Android 7.1 (API level 25) and lower, users can manage notifications on a per-app basis only. Each app effectively has only one channel on Android 7.1 and lower.
+
+Figure 11. Notification settings for the Clock app and one of its channels.
+	An app can have separate channels for each type of notification the app issues. An app can also create notification channels in response to choices made by users. For example, you can set up separate notification channels for each conversation group created by a user in a messaging app.
+
+	The channel is also where you specify the importance level for your notifications on Android 8.0 and higher, so all notifications posted to the same notification channel have the same behavior. This is described in the following section.
+
+Notification importance:
+
+	Android uses the importance of a notification to determine how much the notification interrupts the user visually and audibly. The higher the importance of a notification, the more interruptive the notification is.
+
+	On Android 7.1 (API level 25) and lower, the importance of a notification is determined by the notification's priority.
+
+	On Android 8.0 (API level 26) and higher, the importance of a notification is determined by the importance of the channel the notification is posted to. Users can change the importance of a notification channel in the system settings, as shown in figure 12.
+
+Figure 12. Users can change the importance of each channel on Android 8.0 and higher.
+
+The possible importance levels and the associated notification behaviors are the following:
+
+Urgent: makes a sound and appears as a heads-up notification.
+
+High: makes a sound.
+
+Medium: makes no sound.
+
+Low: makes no sound and doesn't appear in the status bar.
+
+Do Not Disturb mode:

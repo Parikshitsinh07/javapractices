@@ -1,0 +1,30 @@
+student_details
+
+CREATE TABLE `placement_management`.`student_details` (`student_id` INT(4) NOT NULL AUTO_INCREMENT , `S_FristName` CHAR(15) NOT NULL , `S_LastName` CHAR(15) NOT NULL , `Password` CHAR(10) NOT NULL , `S_Email` CHAR(50) NOT NULL , `Course` CHAR(10) NOT NULL , `Adress(Temparery)` VARCHAR(150) NOT NULL , `Adress(Parmanet)` VARCHAR(150) NOT NULL , `Profile_piture` VARCHAR(225) NOT NULL , `city` CHAR(10) NOT NULL , `On_Create` DATETIME NOT NULL , `On_Update` DATETIME NOT NULL , PRIMARY KEY (`student_id`)) ENGINE = InnoDB;
+
+certificate details
+
+CREATE TABLE `placement_management`.`certificate details` (`Certificate_id` INT(2) NOT NULL AUTO_INCREMENT , `student_id` INT(4) NOT NULL , `Certificate_Name` CHAR(50) NOT NULL , `Certificate_Discription` VARCHAR(200) NOT NULL , `Certificate_img` VARCHAR(225) NOT NULL , PRIMARY KEY (`Certificate_id`)) ENGINE = InnoDB;
+
+experience_details
+
+CREATE TABLE `placement_management`.`experience_details` (`Experience_id` INT(2) NOT NULL AUTO_INCREMENT , `student_id` INT(4) NOT NULL , `Company_Name` CHAR(30) NOT NULL , `Experience_Discription` VARCHAR(225) NOT NULL , `Role` CHAR(15) NOT NULL , `Experience_Duration` CHAR(4) NOT NULL , PRIMARY KEY (`Experience_id`)) ENGINE = InnoDB;
+
+
+CREATE TABLE `placement_management`.`project details` (`Project_id` INT(2) NOT NULL AUTO_INCREMENT , `student_id` INT(4) NOT NULL , `Project_title` CHAR(30) NOT NULL , `Project_Discription` VARCHAR(225) NOT NULL , PRIMARY KEY (`Project_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `placement_management`.`application details` (`Application_id` INT(2) NOT NULL AUTO_INCREMENT , `student_id` INT(4) NOT NULL , `Application Status` CHAR(10) NOT NULL , PRIMARY KEY (`Application_id`)) ENGINE = InnoDB;
+
+
+CREATE TABLE `placement_management`.`interview details` (`InterView_id` INT(2) NOT NULL AUTO_INCREMENT , `student_id` INT(4) NOT NULL , `Application_id` INT(2) NOT NULL , `InterView_Date` DATETIME NOT NULL , PRIMARY KEY (`InterView_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `placement_management`.`company details` (`Company_id` INT NOT NULL AUTO_INCREMENT , `Company_Name` CHAR(30) NOT NULL , `Company_Description` VARCHAR(150) NOT NULL , `Company_LinkdeinLink` CHAR(50) NOT NULL , `Company_WebsiteLink` CHAR(50) NOT NULL , `Company_Email` CHAR(50) NOT NULL , `Company_Adress` VARCHAR(150) NOT NULL , `Company_Speciallising` CHAR(30) NOT NULL , PRIMARY KEY (`Company_id`)) ENGINE = InnoDB;
+
+
+CREATE TABLE `placement_management`.`job details` (`JobPost_id` INT(2) NOT NULL AUTO_INCREMENT , `Company_id` INT(2) NOT NULL , `Job_Title` CHAR(30) NOT NULL , `Job_Description` VARCHAR(225) NOT NULL , `job_post(img)` VARCHAR(255) NULL , `job _RequrmentSkill` CHAR(50) NULL , `job_Role` CHAR(20) NOT NULL , `Job_vecancy` INT(2) NOT NULL , `Job_location` CHAR(50) NULL , PRIMARY KEY (`JobPost_id`)) ENGINE = InnoDB;
+
+
+CREATE TABLE `placement_management`.`admin details` (`UserName` CHAR(15) NOT NULL , `UserEmail` CHAR(50) NOT NULL , `Password` CHAR(15) NOT NULL , UNIQUE (`UserEmail`)) ENGINE = InnoDB;
+
+
+CREATE TABLE `placement_management`.`resume details` (`Resume_id` INT(2) NOT NULL AUTO_INCREMENT , `student_id` INT(4) NOT NULL , `Education_id` INT(2) NOT NULL , `Certificate_id` INT(2) NOT NULL , `Skill_id` INT(2) NOT NULL , `Experience_id` INT(2) NOT NULL , `Objective` VARCHAR(225) NOT NULL , `Linkden_Link` CHAR(50) NULL , `Instagram` CHAR(50) NULL , `Potfoliyo_Web_Link` CHAR(50) NULL , `GitHub_link` CHAR(50) NULL , `hobby` CHAR(50) NULL , `Resume_File` VARCHAR(225) NULL , `On_create` DATETIME NOT NULL , `On_Update` DATETIME NOT NULL , PRIMARY KEY (`Resume_id`)) ENGINE = InnoDB;
